@@ -1,4 +1,6 @@
 package com.pro100kryto.server.services.auth.connection;
 
-public interface IAuthServiceConnection {
+import com.pro100kryto.server.service.IServiceConnection;
+
+public interface IAuthServiceConnection extends IServiceConnection {
 }
