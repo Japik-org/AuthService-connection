@@ -6,6 +6,8 @@ import java.rmi.RemoteException;
 
 public interface IAuthServiceConnection extends IServiceConnection {
 
+    long createUser(String nickname, String email, byte[] pass) throws RemoteException, UserAlreadyExistsException;
+
     IUserConn authorizeByUserId(long userId, byte[] pass) throws RemoteException, AuthorizationException;
     IUserConn authorizeByKeyVal(Object key, Object val, byte[] pass) throws RemoteException, AuthorizationException;
 
