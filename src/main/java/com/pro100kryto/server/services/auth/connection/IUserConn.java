@@ -1,15 +1,17 @@
 package com.pro100kryto.server.services.auth.connection;
 
 import java.io.Closeable;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-public interface IUserConn extends Closeable {
-    int getConnId();
-    long getUserId();
-    String getNickname();
+public interface IUserConn extends Remote, Closeable {
+    int getConnId() throws RemoteException;
+    long getUserId() throws RemoteException;
+    String getNickname() throws RemoteException;
 
-    boolean checkSign(byte[] sign, byte[] src);
-    boolean checkPass(byte[] pass);
+    boolean checkSign(byte[] sign, byte[] src) throws RemoteException;
+    boolean checkPass(byte[] pass) throws RemoteException;
 
-    void close();
-    boolean isClosed();
+    void close() throws RemoteException;
+    boolean isClosed() throws RemoteException;
 }
