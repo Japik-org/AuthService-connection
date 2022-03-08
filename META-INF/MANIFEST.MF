@@ -1,3 +1,7 @@
 Manifest-Version: 1.0
+
+Name: Service-Shared
+Shared-Subtype: Auth
+Subtype: Auth
+Version: 0.1.2
 Base-Package: com.pro100kryto.server
-Connect-Modules: UserModel
