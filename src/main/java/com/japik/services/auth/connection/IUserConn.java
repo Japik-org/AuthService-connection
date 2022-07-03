@@ -1,4 +1,4 @@
-package com.pro100kryto.server.services.auth.connection;
+package com.japik.services.auth.connection;
 
 import java.io.Closeable;
 import java.rmi.Remote;

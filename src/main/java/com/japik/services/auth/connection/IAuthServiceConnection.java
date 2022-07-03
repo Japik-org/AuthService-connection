@@ -1,6 +1,6 @@
-package com.pro100kryto.server.services.auth.connection;
+package com.japik.services.auth.connection;
 
-import com.pro100kryto.server.service.IServiceConnection;
+import com.japik.service.IServiceConnection;
 
 import java.rmi.RemoteException;
 
