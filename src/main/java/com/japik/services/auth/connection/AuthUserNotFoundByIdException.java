@@ -5,6 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-public class UserAlreadyAuthorizedException extends AuthorizationException {
-    private final IUserConn userConn;
+public class AuthUserNotFoundByIdException extends AuthUserNotFoundException {
+    private final long id;
 }

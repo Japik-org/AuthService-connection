@@ -6,17 +6,19 @@ import java.rmi.RemoteException;
 
 public interface IAuthServiceConnection extends IServiceConnection {
 
-    long createUser(CreateUserInfo userInfo) throws RemoteException, UserAlreadyExistsException;
+    long createUser(IAuthInsertUser userInfo) throws RemoteException, AuthorizationException;
 
     IUserConn authorizeByUserId(long userId, byte[] pass) throws RemoteException, AuthorizationException;
-    IUserConn authorizeByKeyVal(Object key, Object val, byte[] pass) throws RemoteException, AuthorizationException;
+    IUserConn authorizeByUsername(String username, byte[] pass) throws RemoteException, AuthorizationException;
+    IUserConn authorizeByEmail(String email, byte[] pass) throws RemoteException, AuthorizationException;
 
-    IUserConn getUserConnByConnId(int connId) throws RemoteException, UserConnNotFound;
+    IUserConn getUserConnByConnId(int connId) throws RemoteException, AuthorizationException;
 
-    boolean isAuthorizedByConnId(int connId) throws RemoteException;
-    boolean isAuthorizedByUserId(long userId) throws RemoteException;
+    boolean isAuthorizedByConnId(int connId) throws RemoteException, AuthorizationException;
+    boolean isAuthorizedByUserId(long userId) throws RemoteException, AuthorizationException;
+    boolean isAuthorizedByUsername(String username) throws RemoteException, AuthorizationException;
 
-    boolean dismissAuthorizationByConnId(int connId) throws RemoteException;
-    boolean dismissAllAuthorizationsByUserId(long userId) throws RemoteException;
+    void dismissAuthorizationByConnId(int connId) throws RemoteException, AuthorizationException;
+    void dismissAuthorizationsByUserId(long userId) throws RemoteException, AuthorizationException;
 
 }

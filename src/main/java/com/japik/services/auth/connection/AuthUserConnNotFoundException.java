@@ -5,6 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-public final class UserConnNotFound extends Exception{
+public class AuthUserConnNotFoundException extends AuthorizationException{
     private final int connId;
 }

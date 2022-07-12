@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-public class UserNotFoundException extends AuthorizationException {
-    private final Object key;
-    private final Object val;
+public class AuthUserNotFoundByEmailException extends AuthUserNotFoundException {
+    private final String email;
 }
