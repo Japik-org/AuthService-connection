@@ -5,6 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-public class AuthUserNotFoundByIdException extends AuthUserNotFoundException {
-    private final Object userId;
+public class AuthUserNotFoundByIdStringException extends AuthUserNotFoundException {
+    private final String userIdString;
 }

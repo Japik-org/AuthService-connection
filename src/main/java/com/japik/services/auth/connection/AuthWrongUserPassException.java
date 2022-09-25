@@ -6,5 +6,5 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Getter
 public class AuthWrongUserPassException extends AuthorizationException {
-    private final long UserId;
+    private final Object UserId;
 }
