@@ -8,6 +8,8 @@
     <artifactId>auth-service-shared</artifactId>
     <version>3.0</version>
 
+    <name>Auth Service Shared</name>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
