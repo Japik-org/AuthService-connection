@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-
-Name: Service-Shared
-Subtype: Auth
-Version: 3.0
-Base-Package: com.japik

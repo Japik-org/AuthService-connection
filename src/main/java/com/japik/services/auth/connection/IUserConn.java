@@ -6,7 +6,7 @@ import java.rmi.RemoteException;
 
 public interface IUserConn extends Remote, Closeable {
     int getConnId() throws RemoteException;
-    long getUserId() throws RemoteException;
+    Object getUserId() throws RemoteException;
     String getUsername() throws RemoteException;
 
     boolean checkSign(byte[] sign, byte[] src) throws RemoteException;
